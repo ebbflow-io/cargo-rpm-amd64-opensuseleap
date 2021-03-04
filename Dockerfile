@@ -7,7 +7,7 @@ RUN zypper -n in -t pattern devel_basis
 RUN set -eux; \
     zypper -n install curl; \
 	curl -o /tmp/install_rust.sh https://sh.rustup.rs; \
-	sh /tmp/install_rust.sh -y --default-toolchain stable;
+	sh /tmp/install_rust.sh -y --default-toolchain 1.50.0;
 
 RUN cargo install cargo-rpm
 

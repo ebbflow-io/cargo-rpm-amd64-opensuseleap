@@ -35,7 +35,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: RPM Build
-      uses: ebbflow-io/cargo-rpm-amd64-opensuseleap@master
+      uses: ebbflow-io/cargo-rpm-amd64-opensuseleap@1.50.0
 ```
 
 A working example can be found in use by Ebbflow to build its client package for various OS and CPU architectures [here](https://github.com/ebbflow-io/ebbflow/blob/master/.github/workflows/continuous-integration.yml).
