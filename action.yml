@@ -9,12 +9,8 @@ inputs:
     description: 'build command'
     required: true
     default: 'cargo rpm build -v'
-  dockertag:
-    description: 'Tag of docker image to use, used for testing'
-    required: true
-    default: '1.50.0'
 runs:
   using: 'docker'
-  image: 'docker://ebbflow/cargo-rpm-amd64-opensuseleap:${{ inputs.dockertag }}'
+  image: 'docker://ebbflow/cargo-rpm-amd64-opensuseleap:latest'
   args:
     - ${{ inputs.cmd }}
